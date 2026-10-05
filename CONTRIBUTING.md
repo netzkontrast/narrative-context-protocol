@@ -1,27 +1,30 @@
-# Contributing to the Universal Narrative Model (UNM)
+# Contributing to Narrative Context Protocol
 
-## Overview
-The **Universal Narrative Model (UNM)** is an open-source standard maintained by **Narrative First**, designed to ensure clarity, accessibility, and industry-wide adoption.
+Narrative Context Protocol welcomes focused improvements to open interchange, documentation, examples, bindings, validation tooling, and independently governed profiles or extensions.
 
-## How to Contribute
-We welcome contributions that enhance UNM’s structure, computational modeling, and AI integration.
+Read the [Contribution Policy](governance/contribution-policy.md) and [Namespace Governance](governance/namespaces.md) before opening a pull request.
 
-## Governance & Review
-Originally developed in partnership with **Entertainment Technology Center (ETC) at the University of Southern California**, UNM is now stewarded by **Narrative First**, responsible for maintaining the model and overseeing its evolution.
+## Good contribution candidates
 
-Proposed changes are reviewed by Narrative First’s core maintainers, with input from academic and industry partners.
+- corrections and clarifications to narrative-neutral Core transport;
+- JSON serialization and structural-schema tooling;
+- synthetic positive and negative examples;
+- bindings that reference another standard without duplicating or redefining it;
+- separately named third-party profiles and extensions; and
+- accessibility, spelling, links, and non-semantic documentation improvements.
 
-### 1. Submitting Issues & Proposals
+Changes to the official `dramatica:` profile require Dramatica profile-maintainer approval. Propose substantial or Dramatica-specific changes in a GitHub issue before preparing a pull request.
 
-- Submit suggestions through the **Issues tab**.
-- Clearly document and justify proposals.
+Do not submit confidential information, third-party material you cannot license, or proprietary Dramatica generation, valid-combination, completion, resolution, diagnosis, semantic-validation, certification, or product implementation logic.
 
-### 2. Review Process
-- Narrative First conducts technical reviews.
-- Community and partner feedback is integrated.
+## Pull-request checklist
 
-### 3. Licensing
-- Contributions fall under the **MIT License**.
-- Contributors agree to open access and non-exclusivity.
+1. Identify the affected layer, namespace, and component version.
+2. Explain compatibility and migration impact.
+3. Use synthetic fixtures with four-space JSON indentation.
+4. Add positive and negative structural checks for schema changes.
+5. Run `npm run validate:schema`.
+6. Report successful checks as **NCP schema validation passed**, not **Storyform valid**.
+7. Keep the pull request focused on one concern.
 
-For more details, visit [Narrative First](https://narrativefirst.com).
+Open a [GitHub issue](https://github.com/narrative-first/narrative-context-protocol/issues) when the appropriate namespace, compatibility path, or maintainer is unclear.
